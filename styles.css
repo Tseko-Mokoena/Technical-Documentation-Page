@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #0b0a0a;
+  background-color: #fafafa;
+}
+
+#main-doc {
+  padding: 10px;
+  margin-left: 300px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.entity-element, .css-elements {
+  display: inline-block;
+  background-color: #0b0a0a;
+  padding: 1px 4px;
+  border-radius: 5px;
+  color: #fafafa;
+}
+
+code {
+  display: block;
+  background-color: #0b0a0a;
+  margin-left: 28px;
+  padding: 10px;
+  border-radius: 7px;
+  width: 80%;
+  white-space: pre-wrap;
+  min-width: 388px;
+  color: #fafafa;
+}
+
+.bottom-space {
+  margin-bottom: 30px;
+}
+
+.css-inside-code {
+  border-bottom: 1px solid white;
+  display: block;
+  width: 100vw;
+}
+
+.center-code {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.sample-output {
+  display: block;
+  color: #0b0a0a;
+  background-color: #fafafa;
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 30px;
+  height: 140px;
+  overflow: auto;
+  min-width: 388px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.black-background {
+  display: block;
+  background-color: black;
+  height: 30px;
+  width: 100%;
+}
+
+.inside-margin {
+  display: block;
+  padding: 20px;
+}
+
+nav {
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 99;
+  width: 297px;
+  height: 100vh;
+  border-right: 3px solid #2a2828;
+  overflow-x: hidden;
+  background-color: #fafafa;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0px;
+  margin-block: 0px;
+  background-color: #eeeeee;
+  
+}
+
+nav ul li {
+  box-sizing: border-box;
+  height: 50px;
+  padding: 15px 0 0 10px;
+  color: #0b0a0a;
+  display: block;
+  border-bottom: 1px solid #0b0a0a;
+}
+
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 0;
+    position: absolute;
+    height: 250px;
+    width: 100%;
+  }
+
+  nav ul li {
+    height: 50px;
+    font-size: 15px;
+    padding: 15px 0 0 25px;
+  }
+
+  #main-doc {
+    margin-top: 250px;
+    margin-left: 0px;
+  }
+
+  nav, #main-doc {
+    min-width: 388px;
+  }
+}

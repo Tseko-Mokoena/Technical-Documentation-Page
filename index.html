@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header><h1>Introduction</h1></header>
+        <p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+        <p>CSS is among the core languages of the open web and is standardized across Web browsers according to W3C specifications. Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now just "CSS" with individual CSS modules having version numbers.</p>
+        <p>After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to develop and release recommendations separately per module. Instead of versioning the CSS specification, W3C now periodically takes a snapshot of the latest stable state of the CSS specification and individual modules progress. CSS modules now have version numbers, or levels, such as CSS Color Module Level 5.</p>
+      </section>
+      <section class="main-section" id="Syntax">
+        <header><h1>Syntax</h1></header>
+        <p>The basic goal of the Cascading Stylesheet (CSS) language is to allow a browser engine to paint elements of the page with specific features, like colors, positioning, or decorations. The CSS syntax reflects this goal and its basic building blocks are:</p>
+        <ul>
+          <li>The property which is an identifier, that is a human-readable name, that defines which feature is considered.</li>
+          <li>The value which describe how the feature must be handled by the engine. Each property has a set of valid values, defined by a formal grammar, as well as a semantic meaning, implemented by the browser engine.</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Applying_CSS_to_your_HTML">
+        <header><h1>Applying CSS to your HTML</h1></header>
+        <p>When using CSS, the first thing to get right is to make sure that your CSS is successfully applied to your HTML. In this section, we'll add a CSS stylesheet to your first-website and apply it to your page.</p>
+        <ol type="1" id="applying-css">
+          <li>Inside your first-website folder, create another new folder called styles.</li>
+          <li>Using a text editor, paste the following CSS into a new file, which will give your <span class="entity-element">&lt;p&gt;</span> elements a red text color. It's useful to start with something like this to test whether your stylesheet is being applied to your HTML correctly.</li></ol>
+        <code><span class="css-inside-code">CSS</span>     
+  p {
+    color: red;
+  }
+        </code>
+        <ol type="1" start="3">
+          <li>Save the file in the styles folder with the filename style.css.
+          </li>
+          <li>Open your index.html file. Paste the following line inside the HTML head (between the <span class="entity-element">&lt;head&gt;</span> and <span class="entity-element">&lt;/head&gt;</span> tags):</li>
+        </ol>
+        <code><span class="css-inside-code">HTML</span>
+  &lt;link href="styles/style.css" rel="stylesheet" /&gt; 
+          </code>
+        <ol type="1" start="5">
+          <li>Save index.html and load it in your browser. You should see something like this:</li>
+        </ol>
+        <img src="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content/website-screenshot-styled.png" alt="Mozilla is cool webpage" id="first-webpage-img">
+        <p class="remove-upper-space">If your paragraph text is red, congratulations! Your CSS is working. If not, go through the above steps and check carefully that you have followed each one correctly.</p>
+      </section>
+      <section class="main-section" id="What_is_a_selector?">
+        <header><h1>What is a selector?</h1></header>
+        <p>A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the <i>subject of the selector</i>.</p>
+        <code class="center-code">
+  h1 {
+    color: blue;
+    background-color: yellow;
+  }
+
+  p {
+    color: red;
+  }
+        </code>
+        <p>In earlier articles you may have met some different selectors, and learned that there are selectors that target the document in different ways — for example by selecting an element such as <span class="css-elements">h1</span>, or a class such as <span class="css-elements">.special</span>. Let's start off by recapping the main ones you've already seen.</p>
+      </section>
+      <section class="main-section" id="Pseudo_classes">
+        <header><h1>Pseudo classes</h1></header>
+        <p>A pseudo-class is a selector that selects elements that are in a specific state, e.g., they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code.</p>
+        <p>Pseudo-classes are keywords that start with a colon. For example, <span class="css-elements">:hover</span> is a pseudo-class.</p>
+        <p>Let's look at a basic example. If we wanted to make the first paragraph in an article larger and bold, we could add a class to that paragraph and then add CSS to that class, as shown in the first example below:</p>
+        <code class="bottom-space"><span class="css-inside-code">HTML</span>
+  &lt;article&gt;
+  &lt;p class="first"&gt;
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  &lt;/p>
+&lt;/article&gt;
+        </code>
+        <code><span class="css-inside-code">CSS</span>
+  .first {
+  font-size: 120%;
+  font-weight: bold;
+}
+        </code>
+        <samp class="sample-output">
+          <span class="black-background"></span>
+          <span class="inside-margin">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+
+Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</span>
+        </samp>
+        <p>However, this could be annoying to maintain — what if a new paragraph got added to the top of the document? We'd need to move the class over to the new paragraph. Instead of adding the class, we could use the :first-child pseudo-class selector — this will always target the first child element in the article, and we will no longer need to edit the HTML &#40;this may not always be possible anyway, maybe due to it being generated by a CMS&#41;.</p>
+        <code class="bottom-space"><span class="css-inside-code">HTML</span>
+  &lt;article&gt;
+  &lt;p class="first"&gt;
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  &lt;/p>
+&lt;/article&gt;
+        </code>
+        <code><span class="css-inside-code">CSS</span>
+  article p:first-child {
+  font-size: 120%;
+  font-weight: bold;
+}
+        </code>
+        <samp class="sample-output">
+          <span class="black-background"></span>
+          <span class="inside-margin">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+
+Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</span>
+        </samp>
+        <p>All pseudo-classes behave in this same kind of way. They target some bit of your document that is in a certain state, behaving as if you had added a class into your HTML.</p>
+      </section>
+      <section class="main-section" id="Reference">
+        <header><h1>Reference</h1></header>
+        <p>All documentation in this page is taken from <span><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"  target="_blank">MDN</a></span>.</p>
+      </section>
+    </main>
+    <nav id="navbar">
+      <header><h1>CSS Documentation</h1></header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+        <li><a class="nav-link" href="#Applying_CSS_to_your_HTML">Applying CSS to your HTML</a></li>
+        <li><a class="nav-link" href="#What_is_a_selector?">What is a selector?</a></li>
+        <li><a class="nav-link" href="#Pseudo_classes">Pseudo classes</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
